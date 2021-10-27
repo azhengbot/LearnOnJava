@@ -3,7 +3,8 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 import java.util.concurrent.*;
-import static onjava.CompletableUtilities.*;
+//import static onjava.CompletableUtilities.*;
+//import static CompletableUtilities.*;
 
 public class CompletableOperations {
   static CompletableFuture<Integer> cfi(int i) {
@@ -12,25 +13,25 @@ public class CompletableOperations {
         Integer.valueOf(i));
   }
   public static void main(String[] args) {
-    showr(cfi(1)); // Basic test
-    voidr(cfi(2).runAsync(() ->
+    CompletableUtilities.showr(cfi(1)); // Basic test
+    CompletableUtilities.voidr(cfi(2).runAsync(() ->
       System.out.println("runAsync")));
-    voidr(cfi(3).thenRunAsync(() ->
+    CompletableUtilities.voidr(cfi(3).thenRunAsync(() ->
       System.out.println("thenRunAsync")));
-    voidr(CompletableFuture.runAsync(() ->
+    CompletableUtilities.voidr(CompletableFuture.runAsync(() ->
       System.out.println("runAsync is static")));
-    showr(CompletableFuture.supplyAsync(() -> 99));
-    voidr(cfi(4).thenAcceptAsync(i ->
+    CompletableUtilities.showr(CompletableFuture.supplyAsync(() -> 99));
+    CompletableUtilities.voidr(cfi(4).thenAcceptAsync(i ->
       System.out.println("thenAcceptAsync: " + i)));
-    showr(cfi(5).thenApplyAsync(i -> i + 42));
-    showr(cfi(6).thenComposeAsync(i -> cfi(i + 99)));
+    CompletableUtilities.showr(cfi(5).thenApplyAsync(i -> i + 42));
+    CompletableUtilities.showr(cfi(6).thenComposeAsync(i -> cfi(i + 99)));
     CompletableFuture<Integer> c = cfi(7);
     c.obtrudeValue(111);
-    showr(c);
-    showr(cfi(8).toCompletableFuture());
+    CompletableUtilities.showr(c);
+    CompletableUtilities.showr(cfi(8).toCompletableFuture());
     c = new CompletableFuture<>();
     c.complete(9);
-    showr(c);
+    CompletableUtilities.showr(c);
     c = new CompletableFuture<>();
     c.cancel(true);
     System.out.println("cancelled: " +

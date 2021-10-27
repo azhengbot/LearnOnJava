@@ -93,11 +93,9 @@ reflection/pets/EgyptianMau.class
 reflection/PetCounter$Counter.class
 reflection/toys/GenericToyTest.class
 reflection/Shape.class
-reflection/InnerA$1.class
 reflection/toys/FancyToy.class
 reflection/toys/Shoots.class
 reflection/pets/Creator.class
 reflection/ModifyingPrivateFields.class
-reflection/NullRobotProxyHandler$1.class
 reflection/pets/Hamster.class
 reflection/DynamicProxyHandler.class
