@@ -45,6 +45,7 @@
         <module>strings</module>
         <module>typeinfo</module>
         <module>validating</module>
+        <module>reflection</module>
     </modules>
 
     <properties>
@@ -85,8 +86,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>onjava</groupId>
+            <groupId>OnJava</groupId>
             <artifactId>onjava</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -106,6 +108,15 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>

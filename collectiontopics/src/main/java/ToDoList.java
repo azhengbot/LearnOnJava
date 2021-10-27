@@ -34,7 +34,7 @@ class ToDoList {
   public static void main(String[] args) {
     PriorityQueue<ToDoItem> toDo =
       new PriorityQueue<>();
-    toDo.add(new ToDoItem("Empty trash", 'C', 4));
+    toDo.add(new ToDoItem("Empty patterns.trash", 'C', 4));
     toDo.add(new ToDoItem("Feed dog", 'A', 2));
     toDo.add(new ToDoItem("Feed bird", 'B', 7));
     toDo.add(new ToDoItem("Mow lawn", 'C', 3));
@@ -50,5 +50,5 @@ A2: Feed dog
 B1: Feed cat
 B7: Feed bird
 C3: Mow lawn
-C4: Empty trash
+C4: Empty patterns.trash
 */

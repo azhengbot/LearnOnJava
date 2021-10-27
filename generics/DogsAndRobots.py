@@ -11,7 +11,7 @@ class Dog:
     def reproduce(self):
         pass
 
-class Robot:
+class reflection.Robot:
     def speak(self):
         print("Click!")
     def sit(self):
@@ -24,7 +24,7 @@ def perform(anything):
     anything.sit()
 
 a = Dog()
-b = Robot()
+b = reflection.Robot()
 perform(a)
 perform(b)
 

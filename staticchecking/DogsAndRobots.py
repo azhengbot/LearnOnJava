@@ -10,12 +10,12 @@ class Dog:
     def talk(self):  print("Arf!")
     def reproduce(self): pass
 
-class Robot:
+class reflection.Robot:
     def talk(self): print("Click!")
     def oilChange(self): pass
 
 a = Dog()
-b = Robot()
+b = reflection.Robot()
 
 speak(a)
 speak(b)

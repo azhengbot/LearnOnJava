@@ -10,10 +10,10 @@ func (this Dog) speak() { fmt.Printf("Arf!\n")}
 func (this Dog) sit() { fmt.Printf("Sitting\n")}
 func (this Dog) reproduce() {}
 
-type Robot struct {}
-func (this Robot) speak() { fmt.Printf("Click!\n") }
-func (this Robot) sit() { fmt.Printf("Clank!\n") }
-func (this Robot) oilChange() {}
+type reflection.Robot struct {}
+func (this reflection.Robot) speak() { fmt.Printf("Click!\n") }
+func (this reflection.Robot) sit() { fmt.Printf("Clank!\n") }
+func (this reflection.Robot) oilChange() {}
 
 func perform(speaker interface { speak(); sit() }) {
   speaker.speak();
@@ -22,7 +22,7 @@ func perform(speaker interface { speak(); sit() }) {
 
 func main() {
   perform(Dog{})
-  perform(Robot{})
+  perform(reflection.Robot{})
 }
 /* Output:
 Arf!

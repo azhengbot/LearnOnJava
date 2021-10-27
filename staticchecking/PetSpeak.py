@@ -2,7 +2,7 @@
 # (c)2021 MindView LLC: see Copyright.txt
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://OnJava8.com for more book information.
-#- Speaking pets in Python
+#- Speaking reflection.pets in Python
 
 class Pet:
     def speak(self): pass
@@ -18,8 +18,8 @@ class Dog(Pet):
 def command(pet):
     pet.speak()
 
-pets = [ Cat(), Dog() ] # (1)
-for pet in pets: # (2)
+reflection.pets = [ Cat(), Dog() ] # (1)
+for pet in reflection.pets: # (2)
     command(pet)
 
 output = """

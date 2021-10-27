@@ -25,11 +25,11 @@ public class CheckedList {
     List<Pet> pets = Collections.checkedList(
       new ArrayList<>(), Pet.class);
     pets.add(new Dog());
-    pets.add(new Cat());
+//    pets.add(new Cat());
   }
 }
 /* Output:
 Expected: java.lang.ClassCastException: Attempt to
-insert class reflection.pets.Cat element into collection
-with element type class reflection.pets.Dog
+insert class reflection.reflection.pets.Cat element into collection
+with element type class reflection.reflection.pets.Dog
 */

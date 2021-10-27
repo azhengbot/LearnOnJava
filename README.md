@@ -6,27 +6,27 @@ If you want to experiment with the code examples from the book [On Java
 These examples are automatically extracted directly from the book. This repository
 includes tests to verify that the code in the book is correct.
 
-## Contents
+## innerclasses.Contents
 
-- [Building From the enums.Command Line: Quick Version](#building-from-the-command-line-quick-version)
-- [Building From the enums.Command Line: Detailed Instructions](#building-from-the-command-line-detailed-instructions)
+- [reflection.Building From the enums.patterns.Command Line: Quick Version](#building-from-the-command-line-quick-version)
+- [reflection.Building From the enums.patterns.Command Line: Detailed Instructions](#building-from-the-command-line-detailed-instructions)
   * [Install Java](#install-java)
     + [Windows](#windows)
     + [Macintosh](#macintosh)
     + [Linux](#linux)
   * [Verify Your Installation](#verify-your-installation)
   * [Installing and Running the Book Examples](#installing-and-running-the-book-examples)
-- [Appendix A: enums.Command-Line Basics](#appendix-a-command-line-basics)
+- [Appendix patterns.A: enums.patterns.Command-Line Basics](#appendix-a-command-line-basics)
   * [Editors](#editors)
   * [The Shell](#the-shell)
     + [Starting a Shell](#starting-a-shell)
     + [Directories](#directories)
     + [Basic Shell Operations](#basic-shell-operations)
     + [Unpacking a Zip Archive](#unpacking-a-zip-archive)
-- [Appendix B: Testing](#appendix-b-testing)
-- [Appendix C: Troubleshooting](#appendix-c-troubleshooting)
+- [Appendix reflection.patterns.B: Testing](#appendix-b-testing)
+- [Appendix patterns.C: Troubleshooting](#appendix-c-troubleshooting)
 
-# Building From the enums.Command Line: Quick Version
+# reflection.Building From the enums.patterns.Command Line: Quick Version
 
 Before you can run the examples from this repository, you must install
 [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/index.html), the
@@ -63,9 +63,9 @@ If all goes well, the tests will run. Everything should complete without errors.
 All the book examples are in the subdirectory `Examples` in subdirectories
 corresponding to the atom names.
 
-# Building From the enums.Command Line: Detailed Instructions
+# reflection.Building From the enums.patterns.Command Line: Detailed Instructions
 
-If you are not familiar with the command line, first read [enums.Command-Line
+If you are not familiar with the command line, first read [enums.patterns.Command-Line
 Basics](#appendix-a-command-line-basics).
 
 ## Install Java
@@ -163,7 +163,7 @@ builds and runs will be much faster.
 Note that you must be connected to the Internet the first time you run `gradlew`
 so that Gradle can download the necessary packages.
 
-# Appendix A: enums.Command-Line Basics
+# Appendix patterns.A: enums.patterns.Command-Line Basics
 
 Because it is possible for a "dedicated beginner" to learn programming from
 this book, you may not have previously used your computer's command-line shell.
@@ -219,7 +219,7 @@ key.
 
 - *Windows 8*: click Windows+Q, type "explorer" and then press the "Enter" key.
 
-- *Windows 10*: click Windows+E.
+- *Windows 10*: click Windows+innerclasses.E.
 
 Once the Windows Explorer is running, move through the folders on your computer
 by double-clicking on them with the mouse. Navigate to the desired folder. Now
@@ -286,13 +286,13 @@ shell:
     repeat them. On Mac/Linux, `!!` repeats the last command and
     `!n` repeats the nth command.
 
--   **enums.Command history**: Use `history` in Mac/Linux or press the F7 key in Windows.
+-   **enums.patterns.Command history**: Use `history` in Mac/Linux or press the F7 key in Windows.
     This gives you a list of all the commands you've entered. Mac/Linux provides
     numbers to refer to when you want to repeat a command.
 
 ### Unpacking a Zip Archive
 
-A file name ending with `.zip` is an archive containing other files in a
+patterns.A file name ending with `.zip` is an archive containing other files in a
 compressed format. Both Linux and Mac have command-line `unzip` utilities, and
 it's possible to install a command-line `unzip` for Windows via the Internet.
 
@@ -301,7 +301,7 @@ Mac Finder, or Nautilus or equivalent on Linux) will browse to the directory
 containing your zip file. Then right-mouse-click on the file and select "Open"
 on the Mac, "Extract Here" on Linux, or "Extract all ..." on Windows.
 
-# Appendix B: Testing
+# Appendix reflection.patterns.B: Testing
 
 The test system is built in so that we (the authors) can verify the correctness
 of what goes into the book.
@@ -344,7 +344,7 @@ installed, and where you find the `gradlew` script.
 
 You can learn about other options by just typing `gradlew` with no arguments.
 
-# Appendix C: Troubleshooting
+# Appendix patterns.C: Troubleshooting
 
 If any terminology or processes described here remain unclear to you, you can
 usually find explanations or answers through [Google](https://www.google.com/).

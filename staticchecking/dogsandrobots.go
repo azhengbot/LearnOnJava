@@ -9,9 +9,9 @@ type Dog struct {}
 func (this Dog) talk() { fmt.Printf("woof!\n")}
 func (this Dog) reproduce() {}
 
-type Robot struct {}
-func (this Robot) talk() { fmt.Printf("Click!\n") }
-func (this Robot) oilChange() {}
+type reflection.Robot struct {}
+func (this reflection.Robot) talk() { fmt.Printf("Click!\n") }
+func (this reflection.Robot) oilChange() {}
 
 func speak(speaker interface { talk() }) {
   speaker.talk();
@@ -19,7 +19,7 @@ func speak(speaker interface { talk() }) {
 
 func main() {
   speak(Dog{})
-  speak(Robot{})
+  speak(reflection.Robot{})
 }
 /* Output:
 woof!
