@@ -16,9 +16,11 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <maven.compiler.source>13</maven.compiler.source>
-        <maven.compiler.target>13</maven.compiler.target>
-    </properties>
+   
+    <parent>
+        <groupId>OnJava</groupId>
+        <artifactId>OnJava-Examples-Maven</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     
 </project>

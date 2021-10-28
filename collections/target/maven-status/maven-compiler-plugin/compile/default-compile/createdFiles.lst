@@ -53,6 +53,7 @@ collections/PlusTen.class
 collections/GenericsAndUpcasting.class
 collections/ReversibleArrayList.class
 collections/AsListInference.class
+FinalFields.class
 collections/NonCollectionSequence.class
 collections/Snow.class
 collections/ReversibleArrayList$1.class

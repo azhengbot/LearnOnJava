@@ -7,7 +7,13 @@
     <groupId>OnJava</groupId>
     <artifactId>onjava</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <build>
+
+    <parent>
+        <groupId>OnJava</groupId>
+        <artifactId>OnJava-Examples-Maven</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -18,7 +24,7 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build> -->
 
 
 </project>
