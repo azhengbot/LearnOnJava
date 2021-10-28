@@ -8,6 +8,7 @@ ArraySearching.class
 Sub.class
 TestCount.class
 MultiDimWrapperArray.class
+jmh/ParallelSort.class
 SimpleSetAll.class
 ComparatorTest.class
 AssemblingMultidimensionalArrays.class
