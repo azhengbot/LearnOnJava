@@ -4,8 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
 
-class Lisa extends Homer {
-  @Override void doh(Milhouse m) {
-    System.out.println("doh(Milhouse)");
-  }
-}
+//class Lisa extends Homer {
+//  @Override void doh(Milhouse m) {
+//    System.out.println("doh(Milhouse)");
+//  }
+//}

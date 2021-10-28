@@ -1,12 +1,12 @@
-// com/mindviewinc/simple/List.java
+// com/mindviewinc/simple/Vector.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Creating a package
-package mindviewinc.simple;
+package com.mindviewinc.simple;
 
-public class List {
-  public List() {
-    System.out.println("com.mindviewinc.simple.List");
+public class Vector {
+  public Vector() {
+    System.out.println("com.com.mindviewinc.simple.Vector");
   }
 }

@@ -4,15 +4,15 @@
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
 
-public class OverloadingVarargs2 {
-  static void f(float i, Character... args) {
-    System.out.println("first");
-  }
-  static void f(Character... args) {
-    System.out.print("second");
-  }
-  public static void main(String[] args) {
-    f(1, 'a');
-    f('a', 'b');
-  }
-}
+//public class OverloadingVarargs2 {
+//  static void f(float i, Character... args) {
+//    System.out.println("first");
+//  }
+//  static void f(Character... args) {
+//    System.out.print("second");
+//  }
+//  public static void main(String[] args) {
+//    f(1, 'a');
+//    f('a', 'b');
+//  }
+//}

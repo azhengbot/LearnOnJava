@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // {java interfaces.interfaceprocessor.FilterProcessor}
 package interfaceprocessor;
-import interfaces.filters.*;
+import filters.*;
 
 class FilterAdapter implements Processor {
   Filter filter;

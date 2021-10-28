@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
 
-public class AttemptToUseBasic {
-  Basic b = new Basic();
-  // error: Basic is abstract; cannot be instantiated
-}
+//public class AttemptToUseBasic {
+//  Basic b = new Basic();
+//  // error: Basic is abstract; cannot be instantiated
+//}

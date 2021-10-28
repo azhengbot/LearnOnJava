@@ -3,7 +3,7 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Can't use package-access member from another package
-import hiding.dessert.*;
+import dessert.*;
 
 public class ChocolateChip extends Cookie {
   public ChocolateChip() {

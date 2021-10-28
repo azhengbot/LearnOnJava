@@ -1,0 +1,8 @@
+MemoryInput.class
+FormattedMemoryInput.class
+BasicFileOutput.class
+BufferedInputFile.class
+StoringAndRecoveringData.class
+UsingRandomAccessFile.class
+FileOutputShortcut.class
+TestEOF.class
