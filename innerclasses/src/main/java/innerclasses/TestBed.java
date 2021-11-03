@@ -1,4 +1,5 @@
-package innerclasses;// innerclasses/innerclasses.TestBed.java
+package innerclasses;
+// innerclasses/innerclasses.TestBed.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
@@ -6,13 +7,16 @@ package innerclasses;// innerclasses/innerclasses.TestBed.java
 // {java innerclasses.TestBed$Tester}
 
 public class TestBed {
-  public void f() { System.out.println("f()"); }
-  public static class Tester {
-    public static void main(String[] args) {
-      TestBed t = new TestBed();
-      t.f();
+    public void f() {
+        System.out.println("f()");
     }
-  }
+
+    public static class Tester {
+        public static void main(String[] args) {
+            TestBed t = new TestBed();
+            t.f();
+        }
+    }
 }
 /* Output:
 f()

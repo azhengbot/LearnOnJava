@@ -1,4 +1,5 @@
-package innerclasses;// innerclasses/innerclasses.DotThis.java
+package innerclasses;
+// innerclasses/innerclasses.DotThis.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.

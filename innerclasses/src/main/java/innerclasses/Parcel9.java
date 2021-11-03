@@ -1,4 +1,5 @@
-package innerclasses;// innerclasses/innerclasses.Parcel9.java
+package innerclasses;
+// innerclasses/innerclasses.Parcel9.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
@@ -16,5 +17,6 @@ public class Parcel9 {
   public static void main(String[] args) {
     Parcel9 p = new Parcel9();
     Destination d = p.destination("Tasmania");
+    System.out.println(d.readLabel());
   }
 }

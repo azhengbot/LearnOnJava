@@ -1,4 +1,5 @@
-package innerclasses;// innerclasses/innerclasses.Parcel6.java
+package innerclasses;
+// innerclasses/innerclasses.Parcel6.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
@@ -16,6 +17,7 @@ public class Parcel6 {
       }
       TrackingSlip ts = new TrackingSlip("slip");
       String s = ts.getSlip();
+      System.out.println(s);
     }
     // Can't use it here! Out of scope:
     //- TrackingSlip ts = new TrackingSlip("x");
