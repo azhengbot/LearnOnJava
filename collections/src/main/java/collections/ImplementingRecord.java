@@ -4,11 +4,17 @@
 // Visit http://OnJava8.com for more book information.
 // {NewFeature} Since JDK 16
 
-//interface Star {
-//  double brightness();
-//  double density();
-//}
-//
-//record RedDwarf(double brightness) implements Star {
-//  @Override public double density() { return 100.0; }
-//}
+package collections;
+
+interface Star {
+    double brightness();
+
+    double density();
+}
+
+record RedDwarf(double brightness) implements Star {
+    @Override
+    public double density() {
+        return 100.0;
+    }
+}

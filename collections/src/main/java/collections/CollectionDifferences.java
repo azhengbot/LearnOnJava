@@ -1,7 +1,8 @@
-package collections;// collections/CollectionDifferences.java
+// collections/CollectionDifferences.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package collections;
 import onjava.*;
 
 public class CollectionDifferences {
