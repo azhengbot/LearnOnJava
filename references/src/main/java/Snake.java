@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Tests cloning to see if reference
 // destinations are also cloned
+// 测试克隆，看看是否引用的所有目标都被克隆了
 
 public class Snake implements Cloneable {
   private Snake next;
