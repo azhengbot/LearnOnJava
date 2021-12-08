@@ -1,7 +1,8 @@
-package streams;// streams/streams.FileToWordsRegexp.java
+// streams/streams.FileToWordsRegexp.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.nio.file.*;
 import java.util.stream.*;
 import java.util.regex.Pattern;
@@ -21,7 +22,7 @@ public class FileToWordsRegexp {
   public static void
   main(String[] args) throws Exception {
     FileToWordsRegexp fw =
-      new FileToWordsRegexp("Cheese.dat");
+      new FileToWordsRegexp("streams/Cheese.dat");
     fw.stream()
       .limit(7)
       .map(w -> w + " ")

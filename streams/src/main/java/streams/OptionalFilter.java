@@ -1,7 +1,8 @@
-package streams;// streams/streams.OptionalFilter.java
+// streams/streams.OptionalFilter.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.util.*;
 import java.util.stream.*;
 import java.util.function.*;

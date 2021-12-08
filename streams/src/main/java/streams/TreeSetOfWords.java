@@ -1,7 +1,8 @@
-package streams;// streams/streams.TreeSetOfWords.java
+// streams/streams.TreeSetOfWords.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.util.*;
 import java.nio.file.*;
 import java.util.stream.*;
@@ -10,7 +11,7 @@ public class TreeSetOfWords {
   public static void
   main(String[] args) throws Exception {
     Set<String> words2 =
-      Files.lines(Paths.get("TreeSetOfWords.java"))
+      Files.lines(Paths.get("streams/src/main/java/streams/TreeSetOfWords.java"))
         .flatMap(s -> Arrays.stream(s.split("\\W+")))
         .filter(s -> !s.matches("\\d+")) // No numbers
         .map(String::trim)

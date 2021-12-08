@@ -1,7 +1,8 @@
-package streams;// streams/streams.FileToWordsBuilder.java
+// streams/streams.FileToWordsBuilder.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.nio.file.*;
 import java.util.stream.*;
 
@@ -19,7 +20,7 @@ public class FileToWordsBuilder {
   Stream<String> stream() { return builder.build(); }
   public static void
   main(String[] args) throws Exception {
-    new FileToWordsBuilder("Cheese.dat").stream()
+    new FileToWordsBuilder("streams/Cheese.dat").stream()
       .limit(7)
       .map(w -> w + " ")
       .forEach(System.out::print);

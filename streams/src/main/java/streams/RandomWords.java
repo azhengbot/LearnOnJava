@@ -1,7 +1,8 @@
-package streams;// streams/streams.RandomWords.java
+// streams/streams.RandomWords.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.util.*;
 import java.util.stream.*;
 import java.util.function.*;
@@ -30,7 +31,7 @@ public class RandomWords implements Supplier<String> {
   public static void
   main(String[] args) throws Exception {
     System.out.println(
-      Stream.generate(new RandomWords("Cheese.dat"))
+      Stream.generate(new RandomWords("streams/Cheese.dat"))
         .limit(10)
         .collect(Collectors.joining(" ")));
   }

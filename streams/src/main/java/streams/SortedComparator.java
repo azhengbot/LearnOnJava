@@ -1,13 +1,14 @@
-package streams;// streams/streams.SortedComparator.java
+// streams/streams.SortedComparator.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.util.*;
 
 public class SortedComparator {
   public static void
   main(String[] args) throws Exception {
-    FileToWords.stream("Cheese.dat")
+    FileToWords.stream("streams/Cheese.dat")
       .skip(10)
       .limit(10)
       .sorted(Comparator.reverseOrder())

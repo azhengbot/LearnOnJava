@@ -1,7 +1,8 @@
-package streams;// streams/streams.NumericStreamInfo.java
+// streams/streams.NumericStreamInfo.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 import java.util.stream.*;
 import static streams.RandInts.*;
 

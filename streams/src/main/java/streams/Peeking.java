@@ -1,12 +1,13 @@
-package streams;// streams/streams.Peeking.java
+// streams/streams.Peeking.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+package streams;
 
 class Peeking  {
   public static void
   main(String[] args) throws Exception {
-    FileToWords.stream("Cheese.dat")
+    FileToWords.stream("streams/Cheese.dat")
       .skip(21)
       .limit(4)
       .map(w -> w + " ")

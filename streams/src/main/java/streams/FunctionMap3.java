@@ -1,8 +1,9 @@
-package streams;// streams/streams.FunctionMap3.java
+// streams/streams.FunctionMap3.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Producing numeric output streams
+package streams;
 import java.util.*;
 import java.util.stream.*;
 
