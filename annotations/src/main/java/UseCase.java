@@ -1,3 +1,4 @@
+
 // annotations/UseCase.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -8,5 +9,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UseCase {
   int id();
+
   String description() default "no description";
 }
