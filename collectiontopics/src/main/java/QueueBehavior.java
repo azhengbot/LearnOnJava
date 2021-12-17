@@ -1,3 +1,4 @@
+
 // collectiontopics/QueueBehavior.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -10,16 +11,21 @@ import java.util.concurrent.*;
 public class QueueBehavior {
   static Stream<String> strings() {
     return Arrays.stream(
-      ("one two three four five six seven " +
-       "eight nine ten").split(" "));
+        ("one two three four five six seven " +
+            "eight nine ten").split(" "));
   }
+
   static void test(int id, Queue<String> queue) {
     System.out.print(id + ": ");
-    strings().map(queue::offer).count();
-    while(queue.peek() != null)
+    strings().forEach(queue::offer);
+    System.out.println(queue);
+    while (queue.peek() != null) {
       System.out.print(queue.remove() + " ");
+    }
+
     System.out.println();
   }
+
   public static void main(String[] args) {
     int count = 10;
     test(1, new LinkedList<>());
@@ -35,16 +41,17 @@ public class QueueBehavior {
     test(11, new SynchronousQueue<>());
   }
 }
-/* Output:
-1: one two three four five six seven eight nine ten
-2: eight five four nine one seven six ten three two
-3: one two three four five six seven eight nine ten
-4: one two three four five six seven eight nine ten
-5: one two three four five six seven eight nine ten
-6: eight five four nine one seven six ten three two
-7: one two three four five six seven eight nine ten
-8: one two three four five six seven eight nine ten
-9: one two three four five six seven eight nine ten
-10: one two three four five six seven eight nine ten
-11:
-*/
+/*
+ * Output:
+ * 1: one two three four five six seven eight nine ten
+ * 2: eight five four nine one seven six ten three two
+ * 3: one two three four five six seven eight nine ten
+ * 4: one two three four five six seven eight nine ten
+ * 5: one two three four five six seven eight nine ten
+ * 6: eight five four nine one seven six ten three two
+ * 7: one two three four five six seven eight nine ten
+ * 8: one two three four five six seven eight nine ten
+ * 9: one two three four five six seven eight nine ten
+ * 10: one two three four five six seven eight nine ten
+ * 11:
+ */

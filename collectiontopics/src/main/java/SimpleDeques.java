@@ -1,3 +1,4 @@
+
 // collectiontopics/SimpleDeques.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -9,9 +10,16 @@ import java.util.function.*;
 
 class CountString implements Supplier<String> {
   private int n = 0;
-  CountString() {}
-  CountString(int start) { n = start; }
-  @Override public String get() {
+
+  CountString() {
+  }
+
+  CountString(int start) {
+    n = start;
+  }
+
+  @Override
+  public String get() {
     return Integer.toString(n++);
   }
 }
@@ -19,14 +27,14 @@ class CountString implements Supplier<String> {
 public class SimpleDeques {
   static void test(Deque<String> deque) {
     CountString s1 = new CountString(),
-                s2 = new CountString(20);
-    for(int n = 0; n < 8; n++) {
-        deque.offerFirst(s1.get());
-        deque.offerLast(s2.get()); // Same as offer()
+        s2 = new CountString(20);
+    for (int n = 0; n < 8; n++) {
+      deque.offerFirst(s1.get());
+      deque.offerLast(s2.get()); // Same as offer()
     }
     System.out.println(deque);
     String result = "";
-    while(deque.size() > 0) {
+    while (deque.size() > 0) {
       System.out.print(deque.peekFirst() + " ");
       result += deque.pollFirst() + " ";
       System.out.print(deque.peekLast() + " ");
@@ -34,6 +42,7 @@ public class SimpleDeques {
     }
     System.out.println("\n" + result);
   }
+
   public static void main(String[] args) {
     int count = 10;
     System.out.println("LinkedList");
@@ -46,24 +55,25 @@ public class SimpleDeques {
     test(new ConcurrentLinkedDeque<>());
   }
 }
-/* Output:
-LinkedList
-[7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
-27]
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-ArrayDeque
-[7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
-27]
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-LinkedBlockingDeque
-[4, 3, 2, 1, 0, 20, 21, 22, 23, 24]
-4 24 3 23 2 22 1 21 0 20
-4 24 3 23 2 22 1 21 0 20
-ConcurrentLinkedDeque
-[7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
-27]
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
-*/
+/*
+ * Output:
+ * LinkedList
+ * [7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
+ * 27]
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ * ArrayDeque
+ * [7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
+ * 27]
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ * LinkedBlockingDeque
+ * [4, 3, 2, 1, 0, 20, 21, 22, 23, 24]
+ * 4 24 3 23 2 22 1 21 0 20
+ * 4 24 3 23 2 22 1 21 0 20
+ * ConcurrentLinkedDeque
+ * [7, 6, 5, 4, 3, 2, 1, 0, 20, 21, 22, 23, 24, 25, 26,
+ * 27]
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ * 7 27 6 26 5 25 4 24 3 23 2 22 1 21 0 20
+ */

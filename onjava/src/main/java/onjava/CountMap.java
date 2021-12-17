@@ -1,9 +1,10 @@
-package onjava;// onjava/onjava.CountMap.java
+// onjava/onjava.CountMap.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Unlimited-length Map containing sample data
 // {java onjava.onjava.CountMap}
+package onjava;
 
 import java.util.*;
 import java.util.stream.*;
