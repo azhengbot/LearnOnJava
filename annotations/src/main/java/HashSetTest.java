@@ -11,15 +11,18 @@ import onjava.*;
 
 public class HashSetTest {
   HashSet<String> testObject = new HashSet<>();
+
   @Test
   void initialization() {
     assert testObject.isEmpty();
   }
+
   @Test
   void tContains() {
     testObject.add("one");
     assert testObject.contains("one");
   }
+
   @Test
   void tRemove() {
     testObject.add("one");
@@ -27,10 +30,11 @@ public class HashSetTest {
     assert testObject.isEmpty();
   }
 }
-/* Output:
-annotations.HashSetTest
-  . tContains
-  . initialization
-  . tRemove
-OK (3 tests)
-*/
+/*
+ * Output:
+ * annotations.HashSetTest
+ * . tContains
+ * . initialization
+ * . tRemove
+ * OK (3 tests)
+ */

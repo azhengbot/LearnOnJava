@@ -1,0 +1,14 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,validating/jmh/JMH1.parallelSetAll
+inline,validating/jmh/JMH1.setAll
+inline,validating/jmh/JMH1.setup
+inline,validating/jmh/JMH2.parallelSetAll
+inline,validating/jmh/JMH2.setAll
+inline,validating/jmh/JMH2.setup
+inline,validating/jmh/JMH3.parallelSetAll
+inline,validating/jmh/JMH3.setAll
+inline,validating/jmh/JMH3.setup

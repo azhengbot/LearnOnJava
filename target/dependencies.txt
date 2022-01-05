@@ -1,0 +1,8 @@
+digraph "OnJava:OnJava-Examples-Maven:pom:1.0-SNAPSHOT" { 
+	"OnJava:OnJava-Examples-Maven:pom:1.0-SNAPSHOT" -> "com.google.guava:guava:jar:21.0:compile" ; 
+ } digraph "OnJava:onjava:jar:1.0-SNAPSHOT" { 
+	"OnJava:onjava:jar:1.0-SNAPSHOT" -> "com.google.guava:guava:jar:21.0:compile" ; 
+ } digraph "OnJava:annotations:jar:1.0-SNAPSHOT" { 
+	"OnJava:annotations:jar:1.0-SNAPSHOT" -> "OnJava:onjava:jar:1.0-SNAPSHOT:compile" ; 
+	"OnJava:annotations:jar:1.0-SNAPSHOT" -> "com.google.guava:guava:jar:21.0:compile" ; 
+ } 
