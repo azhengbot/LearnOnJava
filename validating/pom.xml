@@ -96,7 +96,7 @@
         </plugins>
 
         <!-- <testSourceDirectory>src/tests</testSourceDirectory> -->
-        <testSourceDirectory>src/tests</testSourceDirectory>
+        <testSourceDirectory>src/tests/java</testSourceDirectory>
  
     </build>
 
