@@ -1,8 +1,10 @@
-package validating;// validating/GuavaAssertions.java
+// validating/GuavaAssertions.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Assertions that are always enabled.
+package validating;
+
 import com.google.common.base.*;
 import static com.google.common.base.Verify.*;
 
@@ -11,17 +13,17 @@ public class GuavaAssertions {
     verify(2 + 2 == 4);
     try {
       verify(1 + 2 == 4);
-    } catch(VerifyException e) {
+    } catch (VerifyException e) {
       System.out.println(e);
     }
     try {
       verify(1 + 2 == 4, "Bad math");
-    } catch(VerifyException e) {
+    } catch (VerifyException e) {
       System.out.println(e.getMessage());
     }
     try {
       verify(1 + 2 == 4, "Bad math: %s", "not 4");
-    } catch(VerifyException e) {
+    } catch (VerifyException e) {
       System.out.println(e.getMessage());
     }
     String s = "";
@@ -29,21 +31,22 @@ public class GuavaAssertions {
     s = null;
     try {
       verifyNotNull(s);
-    } catch(VerifyException e) {
+    } catch (VerifyException e) {
       System.out.println(e.getMessage());
     }
     try {
       verifyNotNull(
-        s, "Shouldn't be null: %s", "arg s");
-    } catch(VerifyException e) {
+          s, "Shouldn't be null: %s", "arg s");
+    } catch (VerifyException e) {
       System.out.println(e.getMessage());
     }
   }
 }
-/* Output:
-com.google.common.base.VerifyException
-Bad math
-Bad math: not 4
-expected a non-null reference
-Shouldn't be null: arg s
-*/
+/*
+ * Output:
+ * com.google.common.base.VerifyException
+ * Bad math
+ * Bad math: not 4
+ * expected a non-null reference
+ * Shouldn't be null: arg s
+ */

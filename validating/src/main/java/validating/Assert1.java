@@ -1,4 +1,4 @@
-package validating;// validating/validating.Assert1.java
+// validating/validating.Assert1.java
 
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -7,6 +7,7 @@ package validating;// validating/validating.Assert1.java
 // Must run using -ea flag:
 // {java -ea validating.Assert1}
 // {ThrowsException}
+package validating;
 
 public class Assert1 {
   public static void main(String[] args) {
