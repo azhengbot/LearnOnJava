@@ -6,6 +6,7 @@
 
 class A {
   String s;
+
   A(String s) {
     this.s = s;
   }
@@ -13,6 +14,7 @@ class A {
 
 class B {
   A a;
+
   B(A a) {
     this.a = a;
   }
@@ -20,6 +22,7 @@ class B {
 
 class C {
   B b;
+
   C(B b) {
     this.b = b;
   }
@@ -28,14 +31,14 @@ class C {
 public class BetterNullPointerReports {
   public static void main(String[] args) {
     C[] ca = {
-      new C(new B(new A(null))),
-      new C(new B(null)),
-      new C(null),
+        new C(new B(new A(null))),
+        new C(new B(null)),
+        new C(null),
     };
-    for(C c: ca) {
+    for (C c : ca) {
       try {
         System.out.println(c.b.a.s);
-      } catch(NullPointerException npe) {
+      } catch (NullPointerException npe) {
         System.out.println(npe);
       }
     }

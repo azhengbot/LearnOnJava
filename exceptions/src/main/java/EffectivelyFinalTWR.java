@@ -1,3 +1,4 @@
+
 // exceptions/EffectivelyFinalTWR.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -8,23 +9,23 @@ import java.io.*;
 public class EffectivelyFinalTWR {
   static void old() {
     try (
-      InputStream r1 = new FileInputStream(
-        new File("TryWithResources.java"));
-      InputStream r2 = new FileInputStream(
-        new File("EffectivelyFinalTWR.java"));
-    ) {
+        InputStream r1 = new FileInputStream(
+            new File("exceptions/src/main/java/TryWithResources.java"));
+        InputStream r2 = new FileInputStream(
+            new File("exceptions/src/main/java/EffectivelyFinalTWR.java"));) {
       r1.read();
       r2.read();
-    } catch(IOException e) {
+    } catch (IOException e) {
       // Handle exceptions
     }
   }
+
   static void jdk9() throws IOException {
     final InputStream r1 = new FileInputStream(
-      new File("TryWithResources.java"));
+        new File("exceptions/src/main/java/TryWithResources.java"));
     // Effectively final:
     InputStream r2 = new FileInputStream(
-      new File("EffectivelyFinalTWR.java"));
+        new File("exceptions/src/main/java/EffectivelyFinalTWR.java"));
     try (r1; r2) {
       r1.read();
       r2.read();
@@ -34,15 +35,17 @@ public class EffectivelyFinalTWR {
     r1.read();
     r2.read();
   }
+
   public static void main(String[] args) {
     old();
     try {
       jdk9();
-    } catch(IOException e) {
+    } catch (IOException e) {
       System.out.println(e);
     }
   }
 }
-/* Output:
-java.io.IOException: Stream Closed
-*/
+/*
+ * Output:
+ * java.io.IOException: Stream Closed
+ */
