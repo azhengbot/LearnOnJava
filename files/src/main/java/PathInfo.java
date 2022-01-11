@@ -1,3 +1,4 @@
+
 // files/PathInfo.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -11,6 +12,7 @@ public class PathInfo {
   static void show(String id, Object p) {
     System.out.println(id + ": " + p);
   }
+
   static void info(Path p) {
     show("toString", p);
     show("Exists", Files.exists(p));
@@ -22,18 +24,19 @@ public class PathInfo {
     show("Root", p.getRoot());
     System.out.println("******************");
   }
+
   public static void main(String[] args) {
     System.out.println(System.getProperty("os.name"));
     info(Paths.get(
-      "C:", "path", "to", "nowhere", "NoFile.txt"));
-    Path p = Paths.get("PathInfo.java");
+        "C:", "path", "to", "nowhere", "NoFile.txt"));
+    Path p = Paths.get("files/src/main/java/PathInfo.java");
     info(p);
     Path ap = p.toAbsolutePath();
     info(ap);
     info(ap.getParent());
     try {
       info(p.toRealPath());
-    } catch(IOException e) {
+    } catch (IOException e) {
       System.out.println(e);
     }
     URI u = p.toUri();
@@ -43,56 +46,57 @@ public class PathInfo {
     File f = ap.toFile(); // Don't be fooled
   }
 }
-/* Output:
-Windows 8.1
-toString: C:\path\to\nowhere\NoFile.txt
-Exists: false
-RegularFile: false
-Directory: false
-Absolute: true
-FileName: NoFile.txt
-Parent: C:\path\to\nowhere
-Root: C:\
-******************
-toString: PathInfo.java
-Exists: true
-RegularFile: true
-Directory: false
-Absolute: false
-FileName: PathInfo.java
-Parent: null
-Root: null
-******************
-toString:
-C:\Git\OnJava8\ExtractedExamples\files\PathInfo.java
-Exists: true
-RegularFile: true
-Directory: false
-Absolute: true
-FileName: PathInfo.java
-Parent: C:\Git\OnJava8\ExtractedExamples\files
-Root: C:\
-******************
-toString: C:\Git\OnJava8\ExtractedExamples\files
-Exists: true
-RegularFile: false
-Directory: true
-Absolute: true
-FileName: files
-Parent: C:\Git\OnJava8\ExtractedExamples
-Root: C:\
-******************
-toString:
-C:\Git\OnJava8\ExtractedExamples\files\PathInfo.java
-Exists: true
-RegularFile: true
-Directory: false
-Absolute: true
-FileName: PathInfo.java
-Parent: C:\Git\OnJava8\ExtractedExamples\files
-Root: C:\
-******************
-URI: file:///C:/Git/OnJava8/ExtractedExamples/files/Pat
-hInfo.java
-true
-*/
+/*
+ * Output:
+ * Windows 8.1
+ * toString: C:\path\to\nowhere\NoFile.txt
+ * Exists: false
+ * RegularFile: false
+ * Directory: false
+ * Absolute: true
+ * FileName: NoFile.txt
+ * Parent: C:\path\to\nowhere
+ * Root: C:\
+ ******************
+ * toString: PathInfo.java
+ * Exists: true
+ * RegularFile: true
+ * Directory: false
+ * Absolute: false
+ * FileName: PathInfo.java
+ * Parent: null
+ * Root: null
+ ******************
+ * toString:
+ * C:\Git\OnJava8\ExtractedExamples\files\PathInfo.java
+ * Exists: true
+ * RegularFile: true
+ * Directory: false
+ * Absolute: true
+ * FileName: PathInfo.java
+ * Parent: C:\Git\OnJava8\ExtractedExamples\files
+ * Root: C:\
+ ******************
+ * toString: C:\Git\OnJava8\ExtractedExamples\files
+ * Exists: true
+ * RegularFile: false
+ * Directory: true
+ * Absolute: true
+ * FileName: files
+ * Parent: C:\Git\OnJava8\ExtractedExamples
+ * Root: C:\
+ ******************
+ * toString:
+ * C:\Git\OnJava8\ExtractedExamples\files\PathInfo.java
+ * Exists: true
+ * RegularFile: true
+ * Directory: false
+ * Absolute: true
+ * FileName: PathInfo.java
+ * Parent: C:\Git\OnJava8\ExtractedExamples\files
+ * Root: C:\
+ ******************
+ * URI: file:///C:/Git/OnJava8/ExtractedExamples/files/Pat
+ * hInfo.java
+ * true
+ */

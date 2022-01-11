@@ -1,3 +1,4 @@
+
 // concurrent/ParallelPrime.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -11,25 +12,27 @@ import onjava.Timer;
 
 public class ParallelPrime {
   static final int COUNT = 100_000;
+
   public static boolean isPrime(long n) {
-    return rangeClosed(2, (long)Math.sqrt(n))
-      .noneMatch(i -> n % i == 0);
+    return rangeClosed(2, (long) Math.sqrt(n))
+        .noneMatch(i -> n % i == 0);
   }
+
   public static void main(String[] args)
-    throws IOException {
+      throws IOException {
     Timer timer = new Timer();
-    List<String> primes =
-      iterate(2, i -> i + 1)
-        .parallel()                       // [1]
+    List<String> primes = iterate(2, i -> i + 1)
+        .parallel() // [1]
         .filter(ParallelPrime::isPrime)
         .limit(COUNT)
         .mapToObj(Long::toString)
         .collect(Collectors.toList());
     System.out.println(timer.duration());
-    Files.write(Paths.get("primes.txt"), primes,
-      StandardOpenOption.CREATE);
+    Files.write(Paths.get("concurrent/src/main/java/primes.txt"), primes,
+        StandardOpenOption.CREATE);
   }
 }
-/* Output:
-1635
-*/
+/*
+ * Output:
+ * 1635
+ */
