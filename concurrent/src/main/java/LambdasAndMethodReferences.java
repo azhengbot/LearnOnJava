@@ -1,3 +1,4 @@
+
 // concurrent/LambdasAndMethodReferences.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -18,10 +19,8 @@ class NotCallable {
 }
 
 public class LambdasAndMethodReferences {
-  public static void main(String[] args)
-    throws InterruptedException {
-    ExecutorService exec =
-      Executors.newCachedThreadPool();
+  public static void main(String[] args) throws InterruptedException {
+    ExecutorService exec = Executors.newCachedThreadPool();
     exec.submit(() -> System.out.println("Lambda1"));
     exec.submit(new NotRunnable()::go);
     exec.submit(() -> {
@@ -32,9 +31,10 @@ public class LambdasAndMethodReferences {
     exec.shutdown();
   }
 }
-/* Output:
-Lambda1
-NotRunnable
-Lambda2
-NotCallable
-*/
+/*
+ * Output:
+ * Lambda1
+ * NotRunnable
+ * Lambda2
+ * NotCallable
+ */

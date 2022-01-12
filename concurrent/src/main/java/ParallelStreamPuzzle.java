@@ -1,3 +1,4 @@
+
 // concurrent/ParallelStreamPuzzle.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
@@ -8,21 +9,24 @@ import java.util.stream.*;
 
 public class ParallelStreamPuzzle {
   static class IntGenerator
-  implements Supplier<Integer> {
+      implements Supplier<Integer> {
     private int current = 0;
-    @Override public Integer get() {
+
+    @Override
+    public Integer get() {
       return current++;
     }
   }
+
   public static void main(String[] args) {
-    List<Integer> x =
-      Stream.generate(new IntGenerator())
+    List<Integer> x = Stream.generate(new IntGenerator())
         .limit(10)
-        .parallel()                     // [1]
+        .parallel() // [1]
         .collect(Collectors.toList());
     System.out.println(x);
   }
 }
-/* Output:
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-*/
+/*
+ * Output:
+ * [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+ */
